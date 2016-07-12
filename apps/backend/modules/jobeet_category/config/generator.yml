@@ -1,0 +1,32 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           JobeetCategory
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          jobeet_category
+    with_doctrine_route:   true
+    #actions_base_class:    sfActions
+
+    config:
+      actions: ~ #default config of actions in list and form
+      fields:  ~
+      list:
+        title: Category Management
+        display: [=name, slug] #equal sign convert string into a link. Display will specify the fields that will be shown on the list
+        object_actions: {} #category module does not need edit/delete actions executed from list
+        batch_actions: {}
+      filter:
+        class: false
+      form:
+        actions:
+          _delete: ~ #config for new/edit form
+          _list: ~
+          _save: ~
+      edit:
+        title: Editing Category "%%name%%" #string with %% is replaced by the column value of corresponding object
+      new:
+        title: New Category
