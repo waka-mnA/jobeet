@@ -19,6 +19,24 @@ $job = create_job(array('expires_at' => '2008-08-08'));
 $job->save();
 $t->is($job->getDateTimeObject('expires_at')->format('Y-m-d'), '2008-08-08', '->save() does not update expires_at if set');
 
+//Day 17
+$t->comment('->getForLuceneQuery()');
+$job = create_job(array('position' => 'foobar', 'is_activated' => false));
+$job->save();
+$jobs = Doctrine_Core::getTable('JobeetJob')->getForLuceneQuery('position:foobar');
+$t->is(count($jobs), 0, '::getForLuceneQuery() does not return non activated jobs');
+
+$job = create_job(array('position' => 'foobar', 'is_activated' => true));
+$job->save();
+$jobs = Doctrine_Core::getTable('JobeetJob')->getForLuceneQuery('position:foobar');
+$t->is(count($jobs), 1, '::getForLuceneQuery() returns jobs matching the criteria');
+$t->is($jobs[0]->getId(), $job->getId(), '::getForLuceneQuery() returns jobs matching the criteria');
+
+$job->delete();
+$jobs = Doctrine_Core::getTable('JobeetJob')->getForLuceneQuery('position:foobar');
+$t->is(count($jobs), 0, '::getForLuceneQuery() does not return deleted jobs');
+//Day 17 end
+
 function create_job($defaults = array())
 {
   static $category = null;

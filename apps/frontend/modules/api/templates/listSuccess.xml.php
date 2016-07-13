@@ -4,7 +4,7 @@
   <job url="<?php echo $url ?>">
 <?php foreach ($job as $key => $value): ?>
     <<?php echo $key ?>><?php echo $value ?></<?php echo $key ?>>
-<?php endforeach ?>
+<?php endforeach; ?>
   </job>
-<?php endforeach ?>
+<?php endforeach; ?>
 </jobs>

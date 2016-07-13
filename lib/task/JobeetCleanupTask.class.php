@@ -26,7 +26,30 @@ EOF;
   {
     $databaseManager = new sfDatabaseManager($this->configuration);
 
+    //Clearnup Lucene index
+    $index = JobeetJobTable::getLuceneIndex();
+
+    //Delete expired jobs
+    $q = Doctrine_Query::create()
+      ->from('JobeetJob j')
+      ->where('j.expires_at < ?', date('Y-m-d'));
+
+    $jobs = $q->execute();
+    foreach ($jobs as $job)
+    {
+      if ($hit = $index->find('pk:'.$job->getId()))
+      {
+        $index->delete($hit->id);
+      }
+    }
+    //optimize() = Zend Lucene enbedded method
+    $index->optimize();
+
+    $this->logSection('lucene', 'Cleaned up and optimized the job index');
+
+    //Delete old jobs
     $nb = Doctrine_Core::getTable('JobeetJob')->cleanup($options['days']);
+
     $this->logSection('doctrine', sprintf('Removed %d stale jobs', $nb));
   }
 }

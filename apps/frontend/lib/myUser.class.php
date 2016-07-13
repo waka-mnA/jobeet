@@ -40,4 +40,15 @@ class myUser extends sfBasicSecurityUser
     //remove() does not have sfUser proxy method. Need to use parameter holder object directly
     $this->getAttributeHolder()->remove('job_history');
   }
+
+  //Day 19
+  public function isFirstRequest($boolean = null)
+  {
+    if (is_null($boolean))
+    {
+      return $this->getAttribute('first_request', true);
+    }
+
+    $this->setAttribute('first_request', $boolean);
+  }
 }

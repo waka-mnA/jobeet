@@ -13,10 +13,22 @@
 class JobeetAffiliate extends BaseJobeetAffiliate
 {
   //Error: Unknown record property / related component "jobeetcategories" on "JobeetAffiliate"
-  // public function construct(){
-  //   $this->mapValue('JobeetCategories');
-  // }
+  public function construct(){
+    $this->mapValue('JobeetCategories');
+  }
+  public function activate()
+  {
+    $this->setIsActive(true);
 
+    return $this->save();
+  }
+
+  public function deactivate()
+  {
+    $this->setIsActive(false);
+
+    return $this->save();
+  }
   public function getActiveJobs()
   {
     $q = Doctrine_Query::create()

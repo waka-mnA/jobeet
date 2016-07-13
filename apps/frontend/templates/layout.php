@@ -17,6 +17,8 @@
     <link rel="alternate" type="application/atom+xml" title="Latest Jobs"
   href="<?php echo url_for('job', array('sf_format' => 'atom'), true) ?>" />
     <?php include_stylesheets() ?>
+    <?php use_javascript('jquery-3.0.0.min.js')?>
+    <?php use_javascript('search.js') ?>
     <?php include_javascripts() ?>
   </head>
   <body>
@@ -36,15 +38,17 @@
             </div>
 
             <div class="search">
+              <!-- Day 17 search/Day 18 ajax -->
               <h2>Ask for a job</h2>
-              <form action="" method="get">
-                <input type="text" name="keywords"
-                  id="search_keywords" />
-                <input type="submit" value="search" />
-                <div class="help">
-                  Enter some keywords (city, country, position, ...)
-                </div>
-              </form>
+                <form action="<?php echo url_for('job_search') ?>" method="get">
+                  <input type="text" name="query" value="<?php echo $sf_request->getParameter('query') ?>" id="search_keywords" />
+                  <input type="submit" value="search" />
+                  <img id="loader" src="/legacy/images/loader.gif" style="vertical-align: middle; display: none" />
+                  <div class="help">
+                    Enter some keywords (city, country, position, ...)
+                  </div>
+                </form>
+              <!-- Day 17 search end -->
             </div>
           </div>
         </div>
@@ -84,19 +88,23 @@
           <span class="symfony">
             <img src="/legacy/images/jobeet-mini.png" />
             powered by <a href="/">
-            <img src="/legacy/images/symfony.gif" alt="symfony framework" />
-            </a>
+            <img src="/legacy/images/symfony.gif" alt="symfony framework" /></a>
           </span>
           <ul>
-            <li><a href="">About Jobeet</a></li>
-            <li class="feed">
-              <a href="<?php echo url_for('job', array('sf_format' => 'atom')) ?>">Full feed</a>
+            <li>
+              <a href=""><?php echo __('About Jobeet') ?></a>
             </li>
-            <li><a href="">Jobeet API</a></li>
+            <li class="feed">
+              <?php echo link_to(__('Full feed'), 'job', array('sf_format' => 'atom')) ?>
+            </li>
+            <li>
+              <a href=""><?php echo __('Jobeet API') ?></a>
+            </li>
             <li class="last">
-              <a href="<?php echo url_for('affiliate_new') ?>">Become an affiliate</a>
+              <?php echo link_to(__('Become an affiliate'), 'affiliate_new') ?>
             </li>
           </ul>
+          <?php include_component('language', 'language') ?>
         </div>
       </div>
     </div>

@@ -41,8 +41,13 @@
 <?php endif; ?>
 
 <div class="pagination_desc">
-  <strong><?php echo count($pager) ?></strong> jobs in this category
-
+  <!-- format_number_choice has 3 arguments; string used with regard to the number, array for replaceing place holder, number to decide the text that will be used  -->
+  <?php echo format_number_choice(
+      '[0]No job in this category|[1]One job in this category|(1,+Inf]%count% jobs in this category',
+      array('%count%' => '<strong>'.count($pager).'</strong>'),
+      count($pager)
+    )
+  ?>
   <?php if ($pager->haveToPaginate()): ?>
     - page <strong><?php echo $pager->getPage() ?>/<?php echo $pager->getLastPage() ?></strong>
   <?php endif; ?>

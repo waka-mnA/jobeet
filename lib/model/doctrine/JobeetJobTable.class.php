@@ -19,6 +19,51 @@ class JobeetJobTable extends Doctrine_Table
       'freelance' => 'Freelance',
     );
 
+    //Day 17 search index with regard to the existance of the index
+    static public function getLuceneIndex()
+    {
+      ProjectConfiguration::registerZend();
+
+      if (file_exists($index = self::getLuceneIndexFile()))
+      {
+        return Zend_Search_Lucene::open($index);
+      }
+
+      return Zend_Search_Lucene::create($index);
+    }
+
+    //Day 17
+    static public function getLuceneIndexFile()
+    {
+      return sfConfig::get('sf_data_dir').'/job.'.sfConfig::get('sf_environment').'.index';
+    }
+
+    //Day 17 the search itself
+    //after retrieved the all results from lucene index, delete deactive job and limit the number to 20
+    public function getForLuceneQuery($query)
+    {
+      $hits = self::getLuceneIndex()->find($query);
+
+      $pks = array();
+      foreach ($hits as $hit)
+      {
+        $pks[] = $hit->pk;
+      }
+
+      if (empty($pks))
+      {
+        return array();
+      }
+
+      $q = $this->createQuery('j')
+        ->whereIn('j.id', $pks)
+        ->limit(20);
+
+      $q = $this->addActiveJobsQuery($q);
+
+      return $q->execute();
+    }
+
     public function getTypes()
     {
       return self::$types;

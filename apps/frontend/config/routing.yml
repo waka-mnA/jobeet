@@ -1,28 +1,45 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
+#day 19
+change_language:
+  url:   /change_language
+  param: { module: language, action: changeLanguage }
+localized_homepage:
+  url:   /:sf_culture/
+  param: { module: job, action: index }
+  requirements:
+    sf_culture: (?:fr|en)
+
 affiliate:
   class:   sfDoctrineRouteCollection
   options:
-    model: JobeetAffiliate
-    actions: [new, create]
+    model:          JobeetAffiliate
+    actions:        [new, create]
     object_actions: { wait: get }
+    prefix_path:    /:sf_culture/affiliate
+  requirements:
+    sf_culture: (?:fr|en)
 
 api_jobs:
-  url:     /api/:token/jobs.:sf_format
+  url:     /:sf_culture/api/:token/jobs.:sf_format
   class:   sfDoctrineRoute
   param:   { module: api, action: list }
   options: { model: JobeetJob, type: list, method: getForToken }
   requirements:
     sf_format: (?:xml|json|yaml)
+    sf_culture: (?:fr|en)
 
 category:
-  url:     /category/:slug.:sf_format
+  url:     /:sf_culture/category/:slug.:sf_format
   class:   sfDoctrineRoute
   param:   { module: category, action: show, sf_format: html }
-  options: { model: JobeetCategory, type: object }
+  options:
+    model: JobeetCategory
+    type: object
+    method: doSelectForSlug
   requirements:
-    sf_format: (?:html|atom) #caategory route will recognise both html and atom format
-
+    sf_format: (?:html|atom)
+    sf_culture: (?:fr|en)
 #Job route defines all possible rules to write Jobeet application
 job:
   class: sfDoctrineRouteCollection
@@ -30,11 +47,21 @@ job:
     model: JobeetJob
     column: token
     object_actions: { publish: PUT, extend: PUT }
+    prefix_path:  /:sf_culture/job
   requirements:
     token: \w+
+    sf_culture: (?:fr|en)
+
+
+#Day 17 route for search function
+job_search:
+  url:   /:sf_culture/search
+  param: { module: job, action: search }
+  requirements:
+    sf_culture: (?:fr|en)
 
 job_show_user:
-  url: /job/:company_slug/:location_slug/:id/:position_slug
+  url: /:sf_culture/job/:company_slug/:location_slug/:id/:position_slug
   class: sfDoctrineRoute
   options:
     model: JobeetJob
@@ -42,9 +69,11 @@ job_show_user:
     method_for_query: retrieveActiveJob
   param: { module: job, action: show }
   requirements:
-    id: \d+
+    id:         \d+
     sf_method: [get]
-    #force id to be an integer
+    sf_culture: (?:fr|en)
+
+
 
 # default rules
 homepage:

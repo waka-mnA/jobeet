@@ -12,6 +12,22 @@ class jobActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
+    if (!$request->getParameter('sf_culture'))
+    {
+      if ($this->getUser()->isFirstRequest())
+      {
+        $culture = $request->getPreferredCulture(array('en', 'fr'));
+        $this->getUser()->setCulture($culture);
+        $this->getUser()->isFirstRequest(false);
+      }
+      else
+      {
+        $culture = $this->getUser()->getCulture();
+      }
+
+      $this->redirect('localized_homepage');
+    }
+
     $this->categories = Doctrine_Core::getTable('JobeetCategory')->getWithJobs();
   }
 
@@ -85,6 +101,23 @@ class jobActions extends sfActions
 
     $this->redirect('job_show_user', $job);
   }
+  //Day 17 action for search
+  public function executeSearch(sfWebRequest $request)
+  {
+    $this->forwardUnless($query = $request->getParameter('query'), 'job', 'index');
+
+    $this->jobs = Doctrine_Core::getTable('JobeetJob') ->getForLuceneQuery($query);
+
+    if ($request->isXmlHttpRequest())
+    {
+      if ('*' == $query || !$this->jobs)
+      {
+        return $this->renderText('No results.');
+      }
+      return $this->renderPartial('job/list', array('jobs' => $this->jobs));
+    }
+  }
+
 
   protected function processForm(sfWebRequest $request, sfForm $form)
   {
