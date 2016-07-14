@@ -11,7 +11,7 @@ localized_homepage:
     sf_culture: (?:fr|en)
 
 affiliate:
-  class:   sfDoctrineRouteCollection
+  class: sfDoctrineRouteCollection
   options:
     model:          JobeetAffiliate
     actions:        [new, create]

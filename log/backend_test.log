@@ -3226,3 +3226,514 @@ Jul 13 15:23:30 symfony [info] {sfPartialView} Render "/home/sfprojects/jobeet/p
 Jul 13 15:23:30 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/jobeet/apps/backend/templates/layout.php"
 Jul 13 15:23:30 symfony [info] {sfPHPView} Render "/home/sfprojects/jobeet/apps/backend/templates/layout.php"
 Jul 13 15:23:30 symfony [info] {sfWebResponse} Send content (1856 o)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_filter" (/guard/users/filter.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_batch" (/guard/users/batch.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user" (/guard/users.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_new" (/guard/users/new.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_create" (/guard/users.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_edit" (/guard/users/:id/edit.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_update" (/guard/users/:id.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_delete" (/guard/users/:id.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_show" (/guard/users/:id.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_object" (/guard/users/:id/:action.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_collection" (/guard/users/:action/action.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_filter" (/guard/groups/filter.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_batch" (/guard/groups/batch.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group" (/guard/groups.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_new" (/guard/groups/new.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_create" (/guard/groups.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_edit" (/guard/groups/:id/edit.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_update" (/guard/groups/:id.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_delete" (/guard/groups/:id.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_show" (/guard/groups/:id.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_object" (/guard/groups/:id/:action.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_collection" (/guard/groups/:action/action.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_filter" (/guard/permissions/filter.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_batch" (/guard/permissions/batch.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission" (/guard/permissions.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_new" (/guard/permissions/new.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_create" (/guard/permissions.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_edit" (/guard/permissions/:id/edit.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_update" (/guard/permissions/:id.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_delete" (/guard/permissions/:id.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_show" (/guard/permissions/:id.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_object" (/guard/permissions/:id/:action.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_collection" (/guard/permissions/:action/action.:sf_format)
+Jul 13 19:01:43 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Mysql} exec : DELETE FROM sf_guard_user - ()
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Mysql} exec : DELETE FROM jobeet_category_affiliate - ()
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Mysql} exec : DELETE FROM jobeet_job - ()
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Mysql} exec : DELETE FROM jobeet_affiliate - ()
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Mysql} exec : DELETE FROM jobeet_category - ()
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO sf_guard_user (algorithm, is_active, is_super_admin, email_address, username, salt, password, first_name, last_name, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (sha1, 1, 1, admin@example.com, admin, 655bb7bccfbd4cd5171c361da4cf6e7b, ee756c3996304f353df344e19be3736bb0a3a538, Fabien, Potencier, 2016-07-13 19:01:44, 2016-07-13 19:01:44)
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_affiliate (is_active, url, email, token, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?) - (1, http://www.sensio-labs.com/, fabien.potencier@example.com, sensio_labs, 2016-07-13 19:01:44, 2016-07-13 19:01:44)
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_category (created_at, updated_at) VALUES (?, ?) - (2016-07-13 19:01:44, 2016-07-13 19:01:44)
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.lang AS j__lang, j.slug AS j__slug FROM jobeet_category_translation j WHERE (j.slug LIKE ? AND j.lang = ? AND j.name = ?) - (programming%, en, Programming)
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_category_translation (id, lang, name, slug) VALUES (?, ?, ?, ?) - (41, en, Programming, programming)
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.lang AS j__lang, j.slug AS j__slug FROM jobeet_category_translation j WHERE (j.slug LIKE ? AND j.lang = ? AND j.name = ?) - (programmation%, fr, Programmation)
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_category_translation (id, lang, name, slug) VALUES (?, ?, ?, ?) - (41, fr, Programmation, programmation)
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_category_affiliate (category_id, affiliate_id) VALUES (?, ?) - (41, 26)
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_affiliate (is_active, url, email, token, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?) - (0, /, fabien.potencier@example.org, symfony, 2016-07-13 19:01:44, 2016-07-13 19:01:44)
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_category (created_at, updated_at) VALUES (?, ?) - (2016-07-13 19:01:44, 2016-07-13 19:01:44)
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.lang AS j__lang, j.slug AS j__slug FROM jobeet_category_translation j WHERE (j.slug LIKE ? AND j.lang = ? AND j.name = ?) - (design%, en, Design)
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_category_translation (id, lang, name, slug) VALUES (?, ?, ?, ?) - (42, en, Design, design)
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.lang AS j__lang, j.slug AS j__slug FROM jobeet_category_translation j WHERE (j.slug LIKE ? AND j.lang = ? AND j.name = ?) - (design%, fr, design)
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_category_translation (id, lang, name, slug) VALUES (?, ?, ?, ?) - (42, fr, design, design)
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_category_affiliate (category_id, affiliate_id) VALUES (?, ?) - (42, 27)
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_category_affiliate (category_id, affiliate_id) VALUES (?, ?) - (41, 27)
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_category (created_at, updated_at) VALUES (?, ?) - (2016-07-13 19:01:44, 2016-07-13 19:01:44)
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.lang AS j__lang, j.slug AS j__slug FROM jobeet_category_translation j WHERE (j.slug LIKE ? AND j.lang = ? AND j.name = ?) - (manager%, en, Manager)
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_category_translation (id, lang, name, slug) VALUES (?, ?, ?, ?) - (43, en, Manager, manager)
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.lang AS j__lang, j.slug AS j__slug FROM jobeet_category_translation j WHERE (j.slug LIKE ? AND j.lang = ? AND j.name = ?) - (manager%, fr, Manager)
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_category_translation (id, lang, name, slug) VALUES (?, ?, ?, ?) - (43, fr, Manager, manager)
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_category (created_at, updated_at) VALUES (?, ?) - (2016-07-13 19:01:44, 2016-07-13 19:01:44)
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.lang AS j__lang, j.slug AS j__slug FROM jobeet_category_translation j WHERE (j.slug LIKE ? AND j.lang = ? AND j.name = ?) - (administrator%, en, Administrator)
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_category_translation (id, lang, name, slug) VALUES (?, ?, ?, ?) - (44, en, Administrator, administrator)
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.lang AS j__lang, j.slug AS j__slug FROM jobeet_category_translation j WHERE (j.slug LIKE ? AND j.lang = ? AND j.name = ?) - (administrateur%, fr, Administrateur)
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_category_translation (id, lang, name, slug) VALUES (?, ?, ?, ?) - (44, fr, Administrateur, administrateur)
+Jul 13 19:01:44 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, type, company, logo, url, position, location, description, how_to_apply, created_at, token, email, expires_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, full-time, Sensio Labs, sensio-labs.gif, http://www.sensiolabs.com/, Web Developer, Paris, France, [0.27Kb], Send your resume to fabien.potencier [at] sensio.com
+, 2016-7-06 00:00:00, job_sensio_labs, job@example.com, 2016-8-06 00:00:0, 2016-07-13 19:01:44)
+Jul 13 19:01:46 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, type, company, logo, url, position, location, description, how_to_apply, created_at, token, email, expires_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 42, part-time, Extreme Sensio, extreme-sensio.gif, http://www.extreme-sensio.com/, Web Designer, Paris, France, [0.44Kb], Send your resume to fabien.potencier [at] sensio.com
+, 2016-7-06 00:00:00, job_extreme_sensio, job@example.com, 2016-8-06 00:00:00, 2016-07-13 19:01:46)
+Jul 13 19:01:46 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, created_at, token, email, expires_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Sensio Labs, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] dolor.sit, 2005-12-01 00:00:00, job_expired, job@example.com, 2005-12-31 00:00:00, 2016-07-13 19:01:46)
+Jul 13 19:01:46 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 100, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_100.sit
+, job_100, job@example.com, 2016-08-12 19:01:46, 2016-07-13 19:01:46, 2016-07-13 19:01:46)
+Jul 13 19:01:46 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 101, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_101.sit
+, job_101, job@example.com, 2016-08-12 19:01:46, 2016-07-13 19:01:46, 2016-07-13 19:01:46)
+Jul 13 19:01:46 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 102, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_102.sit
+, job_102, job@example.com, 2016-08-12 19:01:46, 2016-07-13 19:01:46, 2016-07-13 19:01:46)
+Jul 13 19:01:47 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 103, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_103.sit
+, job_103, job@example.com, 2016-08-12 19:01:47, 2016-07-13 19:01:47, 2016-07-13 19:01:47)
+Jul 13 19:01:47 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 104, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_104.sit
+, job_104, job@example.com, 2016-08-12 19:01:47, 2016-07-13 19:01:47, 2016-07-13 19:01:47)
+Jul 13 19:01:47 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 105, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_105.sit
+, job_105, job@example.com, 2016-08-12 19:01:47, 2016-07-13 19:01:47, 2016-07-13 19:01:47)
+Jul 13 19:01:48 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 106, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_106.sit
+, job_106, job@example.com, 2016-08-12 19:01:48, 2016-07-13 19:01:48, 2016-07-13 19:01:48)
+Jul 13 19:01:48 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 107, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_107.sit
+, job_107, job@example.com, 2016-08-12 19:01:48, 2016-07-13 19:01:48, 2016-07-13 19:01:48)
+Jul 13 19:01:48 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 108, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_108.sit
+, job_108, job@example.com, 2016-08-12 19:01:48, 2016-07-13 19:01:48, 2016-07-13 19:01:48)
+Jul 13 19:01:49 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 109, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_109.sit
+, job_109, job@example.com, 2016-08-12 19:01:49, 2016-07-13 19:01:49, 2016-07-13 19:01:49)
+Jul 13 19:01:49 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 110, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_110.sit
+, job_110, job@example.com, 2016-08-12 19:01:49, 2016-07-13 19:01:49, 2016-07-13 19:01:49)
+Jul 13 19:01:49 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 111, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_111.sit
+, job_111, job@example.com, 2016-08-12 19:01:49, 2016-07-13 19:01:49, 2016-07-13 19:01:49)
+Jul 13 19:01:50 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 112, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_112.sit
+, job_112, job@example.com, 2016-08-12 19:01:50, 2016-07-13 19:01:50, 2016-07-13 19:01:50)
+Jul 13 19:01:50 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 113, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_113.sit
+, job_113, job@example.com, 2016-08-12 19:01:50, 2016-07-13 19:01:50, 2016-07-13 19:01:50)
+Jul 13 19:01:50 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 114, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_114.sit
+, job_114, job@example.com, 2016-08-12 19:01:50, 2016-07-13 19:01:50, 2016-07-13 19:01:50)
+Jul 13 19:01:50 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 115, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_115.sit
+, job_115, job@example.com, 2016-08-12 19:01:50, 2016-07-13 19:01:50, 2016-07-13 19:01:50)
+Jul 13 19:01:51 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 116, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_116.sit
+, job_116, job@example.com, 2016-08-12 19:01:51, 2016-07-13 19:01:51, 2016-07-13 19:01:51)
+Jul 13 19:01:51 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 117, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_117.sit
+, job_117, job@example.com, 2016-08-12 19:01:51, 2016-07-13 19:01:51, 2016-07-13 19:01:51)
+Jul 13 19:01:51 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 118, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_118.sit
+, job_118, job@example.com, 2016-08-12 19:01:51, 2016-07-13 19:01:51, 2016-07-13 19:01:51)
+Jul 13 19:01:52 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 119, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_119.sit
+, job_119, job@example.com, 2016-08-12 19:01:52, 2016-07-13 19:01:52, 2016-07-13 19:01:52)
+Jul 13 19:01:52 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 120, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_120.sit
+, job_120, job@example.com, 2016-08-12 19:01:52, 2016-07-13 19:01:52, 2016-07-13 19:01:52)
+Jul 13 19:01:53 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 121, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_121.sit
+, job_121, job@example.com, 2016-08-12 19:01:53, 2016-07-13 19:01:53, 2016-07-13 19:01:53)
+Jul 13 19:01:53 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 122, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_122.sit
+, job_122, job@example.com, 2016-08-12 19:01:53, 2016-07-13 19:01:53, 2016-07-13 19:01:53)
+Jul 13 19:01:53 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 123, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_123.sit
+, job_123, job@example.com, 2016-08-12 19:01:53, 2016-07-13 19:01:53, 2016-07-13 19:01:53)
+Jul 13 19:01:54 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 124, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_124.sit
+, job_124, job@example.com, 2016-08-12 19:01:54, 2016-07-13 19:01:54, 2016-07-13 19:01:54)
+Jul 13 19:01:54 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 125, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_125.sit
+, job_125, job@example.com, 2016-08-12 19:01:54, 2016-07-13 19:01:54, 2016-07-13 19:01:54)
+Jul 13 19:01:54 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 126, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_126.sit
+, job_126, job@example.com, 2016-08-12 19:01:54, 2016-07-13 19:01:54, 2016-07-13 19:01:54)
+Jul 13 19:01:55 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 127, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_127.sit
+, job_127, job@example.com, 2016-08-12 19:01:55, 2016-07-13 19:01:55, 2016-07-13 19:01:55)
+Jul 13 19:01:55 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 128, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_128.sit
+, job_128, job@example.com, 2016-08-12 19:01:55, 2016-07-13 19:01:55, 2016-07-13 19:01:55)
+Jul 13 19:01:56 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 129, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_129.sit
+, job_129, job@example.com, 2016-08-12 19:01:56, 2016-07-13 19:01:56, 2016-07-13 19:01:56)
+Jul 13 19:01:56 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO jobeet_job (is_public, is_activated, category_id, company, position, location, description, how_to_apply, token, email, expires_at, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) - (1, 1, 41, Company 130, Web Developer, Paris, France, Lorem ipsum dolor sit amet, consectetur adipisicing elit., Send your resume to lorem.ipsum [at] company_130.sit
+, job_130, job@example.com, 2016-08-12 19:01:56, 2016-07-13 19:01:56, 2016-07-13 19:01:56)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_filter" (/guard/users/filter.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_batch" (/guard/users/batch.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user" (/guard/users.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_new" (/guard/users/new.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_create" (/guard/users.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_edit" (/guard/users/:id/edit.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_update" (/guard/users/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_delete" (/guard/users/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_show" (/guard/users/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_object" (/guard/users/:id/:action.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_collection" (/guard/users/:action/action.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_filter" (/guard/groups/filter.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_batch" (/guard/groups/batch.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group" (/guard/groups.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_new" (/guard/groups/new.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_create" (/guard/groups.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_edit" (/guard/groups/:id/edit.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_update" (/guard/groups/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_delete" (/guard/groups/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_show" (/guard/groups/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_object" (/guard/groups/:id/:action.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_collection" (/guard/groups/:action/action.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_filter" (/guard/permissions/filter.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_batch" (/guard/permissions/batch.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission" (/guard/permissions.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_new" (/guard/permissions/new.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_create" (/guard/permissions.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_edit" (/guard/permissions/:id/edit.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_update" (/guard/permissions/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_delete" (/guard/permissions/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_show" (/guard/permissions/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_object" (/guard/permissions/:id/:action.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_collection" (/guard/permissions/:action/action.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Match route "jobeet_affiliate" (/affiliate.:sf_format) for /affiliate with parameters array (  'module' => 'affiliate',  'action' => 'index',  'sf_format' => 'html',)
+Jul 13 19:01:57 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Jul 13 19:01:57 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 13 19:01:57 symfony [info] {sfBasicSecurityFilter} Action "affiliate/index" requires authentication, forwarding to "sfGuardAuth/signin"
+Jul 13 19:01:57 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Jul 13 19:01:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 13 19:01:57 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Jul 13 19:01:57 symfony [info] {sfPHPView} Render "/home/sfprojects/jobeet/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
+Jul 13 19:01:57 symfony [info] {sfPartialView} Render "/home/sfprojects/jobeet/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/_signin_form.php"
+Jul 13 19:01:57 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/jobeet/apps/backend/templates/layout.php"
+Jul 13 19:01:57 symfony [info] {sfPHPView} Render "/home/sfprojects/jobeet/apps/backend/templates/layout.php"
+Jul 13 19:01:57 symfony [info] {sfWebResponse} Send content (1856 o)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_filter" (/guard/users/filter.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_batch" (/guard/users/batch.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user" (/guard/users.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_new" (/guard/users/new.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_create" (/guard/users.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_edit" (/guard/users/:id/edit.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_update" (/guard/users/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_delete" (/guard/users/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_show" (/guard/users/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_object" (/guard/users/:id/:action.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_collection" (/guard/users/:action/action.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_filter" (/guard/groups/filter.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_batch" (/guard/groups/batch.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group" (/guard/groups.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_new" (/guard/groups/new.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_create" (/guard/groups.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_edit" (/guard/groups/:id/edit.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_update" (/guard/groups/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_delete" (/guard/groups/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_show" (/guard/groups/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_object" (/guard/groups/:id/:action.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_collection" (/guard/groups/:action/action.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_filter" (/guard/permissions/filter.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_batch" (/guard/permissions/batch.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission" (/guard/permissions.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_new" (/guard/permissions/new.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_create" (/guard/permissions.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_edit" (/guard/permissions/:id/edit.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_update" (/guard/permissions/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_delete" (/guard/permissions/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_show" (/guard/permissions/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_object" (/guard/permissions/:id/:action.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_collection" (/guard/permissions/:action/action.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Match route "sf_guard_signin" (/guard/login) for /guard/login with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signin',)
+Jul 13 19:01:57 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Jul 13 19:01:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 13 19:01:57 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Jul 13 19:01:57 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.username = ? AND s.is_active = ?) - (admin, 1)
+Jul 13 19:01:57 symfony [info] {myUser} User is authenticated
+Jul 13 19:01:57 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.permission_id AS s2__permission_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_permission s LEFT JOIN sf_guard_user_permission s2 ON s.id = s2.permission_id WHERE (s2.user_id IN (?)) - (10)
+Jul 13 19:01:57 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.group_id AS s2__group_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_group s LEFT JOIN sf_guard_user_group s2 ON s.id = s2.group_id WHERE (s2.user_id IN (?)) - (10)
+Jul 13 19:01:57 symfony [info] {myUser} Add credential(s) ""
+Jul 13 19:01:57 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE sf_guard_user SET last_login = ?, updated_at = ? WHERE id = ? - (2016-07-13 19:01:57, 2016-07-13 19:01:57, 10)
+Jul 13 19:01:57 symfony [info] {sfFrontWebController} Redirect to "http://localhost/index.php/affiliate"
+Jul 13 19:01:57 symfony [info] {sfWebResponse} Send content (107 o)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_filter" (/guard/users/filter.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_batch" (/guard/users/batch.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user" (/guard/users.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_new" (/guard/users/new.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_create" (/guard/users.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_edit" (/guard/users/:id/edit.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_update" (/guard/users/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_delete" (/guard/users/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_show" (/guard/users/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_object" (/guard/users/:id/:action.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_collection" (/guard/users/:action/action.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_filter" (/guard/groups/filter.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_batch" (/guard/groups/batch.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group" (/guard/groups.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_new" (/guard/groups/new.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_create" (/guard/groups.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_edit" (/guard/groups/:id/edit.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_update" (/guard/groups/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_delete" (/guard/groups/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_show" (/guard/groups/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_object" (/guard/groups/:id/:action.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_collection" (/guard/groups/:action/action.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_filter" (/guard/permissions/filter.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_batch" (/guard/permissions/batch.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission" (/guard/permissions.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_new" (/guard/permissions/new.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_create" (/guard/permissions.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_edit" (/guard/permissions/:id/edit.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_update" (/guard/permissions/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_delete" (/guard/permissions/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_show" (/guard/permissions/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_object" (/guard/permissions/:id/:action.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_collection" (/guard/permissions/:action/action.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Match route "jobeet_affiliate" (/affiliate.:sf_format) for /affiliate with parameters array (  'module' => 'affiliate',  'action' => 'index',  'sf_format' => 'html',)
+Jul 13 19:01:57 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Jul 13 19:01:57 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 13 19:01:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 13 19:01:57 symfony [info] {affiliateActions} Call "affiliateActions->executeIndex()"
+Jul 13 19:01:57 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_affiliate j WHERE j.is_active = ? - (0)
+Jul 13 19:01:57 symfony [info] {sfPHPView} Render "/home/sfprojects/jobeet/cache/backend/test/modules/autoAffiliate/templates/indexSuccess.php"
+Jul 13 19:01:57 symfony [info] {sfPartialView} Render "/home/sfprojects/jobeet/cache/backend/test/modules/autoAffiliate/templates/_assets.php"
+Jul 13 19:01:57 symfony [info] {sfPartialView} Render "/home/sfprojects/jobeet/cache/backend/test/modules/autoAffiliate/templates/_flashes.php"
+Jul 13 19:01:57 symfony [info] {sfPartialView} Render "/home/sfprojects/jobeet/cache/backend/test/modules/autoAffiliate/templates/_list_header.php"
+Jul 13 19:01:57 symfony [info] {sfPartialView} Render "/home/sfprojects/jobeet/cache/backend/test/modules/autoAffiliate/templates/_filters.php"
+Jul 13 19:01:57 symfony [info] {sfPartialView} Render "/home/sfprojects/jobeet/cache/backend/test/modules/autoAffiliate/templates/_filters_field.php"
+Jul 13 19:01:57 symfony [info] {sfPartialView} Render "/home/sfprojects/jobeet/cache/backend/test/modules/autoAffiliate/templates/_filters_field.php"
+Jul 13 19:01:57 symfony [info] {sfPartialView} Render "/home/sfprojects/jobeet/cache/backend/test/modules/autoAffiliate/templates/_filters_field.php"
+Jul 13 19:01:57 symfony [info] {sfPartialView} Render "/home/sfprojects/jobeet/cache/backend/test/modules/autoAffiliate/templates/_list.php"
+Jul 13 19:01:57 symfony [info] {sfPartialView} Render "/home/sfprojects/jobeet/cache/backend/test/modules/autoAffiliate/templates/_list_th_tabular.php"
+Jul 13 19:01:57 symfony [info] {main} Set slot "sf_admin.current_header"
+Jul 13 19:01:57 symfony [info] {main} Get slot "sf_admin.current_header"
+Jul 13 19:01:57 symfony [info] {main} Set slot "sf_admin.current_header"
+Jul 13 19:01:57 symfony [info] {main} Get slot "sf_admin.current_header"
+Jul 13 19:01:57 symfony [info] {main} Set slot "sf_admin.current_header"
+Jul 13 19:01:57 symfony [info] {main} Get slot "sf_admin.current_header"
+Jul 13 19:01:57 symfony [info] {main} Set slot "sf_admin.current_header"
+Jul 13 19:01:57 symfony [info] {main} Get slot "sf_admin.current_header"
+Jul 13 19:01:57 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.url AS j__url, j.email AS j__email, j.token AS j__token, j.is_active AS j__is_active, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_affiliate j WHERE (j.is_active = ?) ORDER BY j.is_active asc LIMIT 20 - (0)
+Jul 13 19:01:57 symfony [info] {sfPartialView} Render "/home/sfprojects/jobeet/cache/backend/test/modules/autoAffiliate/templates/_list_td_batch_actions.php"
+Jul 13 19:01:57 symfony [info] {sfPartialView} Render "/home/sfprojects/jobeet/cache/backend/test/modules/autoAffiliate/templates/_list_td_tabular.php"
+Jul 13 19:01:57 symfony [info] {sfPartialView} Render "/home/sfprojects/jobeet/cache/backend/test/modules/autoAffiliate/templates/_list_field_boolean.php"
+Jul 13 19:01:57 symfony [info] {sfPartialView} Render "/home/sfprojects/jobeet/cache/backend/test/modules/autoAffiliate/templates/_list_td_actions.php"
+Jul 13 19:01:57 symfony [info] {sfPartialView} Render "/home/sfprojects/jobeet/cache/backend/test/modules/autoAffiliate/templates/_list_batch_actions.php"
+Jul 13 19:01:57 symfony [info] {sfPartialView} Render "/home/sfprojects/jobeet/cache/backend/test/modules/autoAffiliate/templates/_list_actions.php"
+Jul 13 19:01:57 symfony [info] {sfPartialView} Render "/home/sfprojects/jobeet/cache/backend/test/modules/autoAffiliate/templates/_list_footer.php"
+Jul 13 19:01:57 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/jobeet/apps/backend/templates/layout.php"
+Jul 13 19:01:57 symfony [info] {sfPHPView} Render "/home/sfprojects/jobeet/apps/backend/templates/layout.php"
+Jul 13 19:01:57 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_affiliate j WHERE j.is_active = ? - (0)
+Jul 13 19:01:57 symfony [info] {sfWebResponse} Send content (6767 o)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_filter" (/guard/users/filter.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_batch" (/guard/users/batch.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user" (/guard/users.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_new" (/guard/users/new.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_create" (/guard/users.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_edit" (/guard/users/:id/edit.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_update" (/guard/users/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_delete" (/guard/users/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_show" (/guard/users/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_object" (/guard/users/:id/:action.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_collection" (/guard/users/:action/action.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_filter" (/guard/groups/filter.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_batch" (/guard/groups/batch.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group" (/guard/groups.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_new" (/guard/groups/new.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_create" (/guard/groups.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_edit" (/guard/groups/:id/edit.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_update" (/guard/groups/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_delete" (/guard/groups/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_show" (/guard/groups/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_object" (/guard/groups/:id/:action.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_collection" (/guard/groups/:action/action.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_filter" (/guard/permissions/filter.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_batch" (/guard/permissions/batch.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission" (/guard/permissions.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_new" (/guard/permissions/new.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_create" (/guard/permissions.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_edit" (/guard/permissions/:id/edit.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_update" (/guard/permissions/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_delete" (/guard/permissions/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_show" (/guard/permissions/:id.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_object" (/guard/permissions/:id/:action.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_collection" (/guard/permissions/:action/action.:sf_format)
+Jul 13 19:01:57 symfony [info] {sfPatternRouting} Match route "jobeet_affiliate_object" (/affiliate/:id/:action.:sf_format) for /affiliate/27/ListActivate with parameters array (  'module' => 'affiliate',  'action' => 'ListActivate',  'sf_format' => 'html',  'id' => '27',)
+Jul 13 19:01:57 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Jul 13 19:01:57 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 13 19:01:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 13 19:01:57 symfony [info] {affiliateActions} Call "affiliateActions->executeListActivate()"
+Jul 13 19:01:57 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.url AS j__url, j.email AS j__email, j.token AS j__token, j.is_active AS j__is_active, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_affiliate j WHERE (j.id = ?) - (27)
+Jul 13 19:01:57 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE jobeet_affiliate SET is_active = ?, updated_at = ? WHERE id = ? - (1, 2016-07-13 19:01:57, 27)
+Jul 13 19:01:58 symfony [info] {sfMailerMessageLoggerPlugin} Sending email "Jobeet affiliate token" to "fabien.potencier@example.org"
+Jul 13 19:01:58 symfony [info] {sfFrontWebController} Redirect to "http://localhost/index.php/affiliate"
+Jul 13 19:01:58 symfony [info] {sfWebResponse} Send content (107 o)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_filter" (/guard/users/filter.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_batch" (/guard/users/batch.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user" (/guard/users.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_new" (/guard/users/new.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_create" (/guard/users.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_edit" (/guard/users/:id/edit.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_update" (/guard/users/:id.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_delete" (/guard/users/:id.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_show" (/guard/users/:id.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_object" (/guard/users/:id/:action.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_collection" (/guard/users/:action/action.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_filter" (/guard/groups/filter.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_batch" (/guard/groups/batch.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group" (/guard/groups.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_new" (/guard/groups/new.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_create" (/guard/groups.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_edit" (/guard/groups/:id/edit.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_update" (/guard/groups/:id.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_delete" (/guard/groups/:id.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_show" (/guard/groups/:id.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_object" (/guard/groups/:id/:action.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_collection" (/guard/groups/:action/action.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_filter" (/guard/permissions/filter.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_batch" (/guard/permissions/batch.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission" (/guard/permissions.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_new" (/guard/permissions/new.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_create" (/guard/permissions.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_edit" (/guard/permissions/:id/edit.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_update" (/guard/permissions/:id.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_delete" (/guard/permissions/:id.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_show" (/guard/permissions/:id.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_object" (/guard/permissions/:id/:action.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_collection" (/guard/permissions/:action/action.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_filter" (/guard/users/filter.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_batch" (/guard/users/batch.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user" (/guard/users.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_new" (/guard/users/new.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_create" (/guard/users.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_edit" (/guard/users/:id/edit.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_update" (/guard/users/:id.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_delete" (/guard/users/:id.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_show" (/guard/users/:id.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_object" (/guard/users/:id/:action.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_collection" (/guard/users/:action/action.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_filter" (/guard/groups/filter.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_batch" (/guard/groups/batch.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group" (/guard/groups.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_new" (/guard/groups/new.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_create" (/guard/groups.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_edit" (/guard/groups/:id/edit.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_update" (/guard/groups/:id.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_delete" (/guard/groups/:id.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_show" (/guard/groups/:id.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_object" (/guard/groups/:id/:action.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_collection" (/guard/groups/:action/action.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_filter" (/guard/permissions/filter.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_batch" (/guard/permissions/batch.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission" (/guard/permissions.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_new" (/guard/permissions/new.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_create" (/guard/permissions.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_edit" (/guard/permissions/:id/edit.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_update" (/guard/permissions/:id.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_delete" (/guard/permissions/:id.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_show" (/guard/permissions/:id.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_object" (/guard/permissions/:id/:action.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_collection" (/guard/permissions/:action/action.:sf_format)
+Jul 13 19:01:58 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /job/index with parameters array (  'module' => 'job',  'action' => 'index',)
+Jul 13 19:01:59 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Jul 13 19:01:59 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 13 19:01:59 symfony [info] {sfBasicSecurityFilter} Action "job/index" requires authentication, forwarding to "sfGuardAuth/signin"
+Jul 13 19:01:59 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Jul 13 19:01:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 13 19:01:59 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Jul 13 19:01:59 symfony [info] {sfPHPView} Render "/home/sfprojects/jobeet/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
+Jul 13 19:01:59 symfony [info] {sfPartialView} Render "/home/sfprojects/jobeet/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/_signin_form.php"
+Jul 13 19:01:59 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/jobeet/apps/backend/templates/layout.php"
+Jul 13 19:01:59 symfony [info] {sfPHPView} Render "/home/sfprojects/jobeet/apps/backend/templates/layout.php"
+Jul 13 19:01:59 symfony [info] {sfWebResponse} Send content (1856 o)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_filter" (/guard/users/filter.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_batch" (/guard/users/batch.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user" (/guard/users.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_new" (/guard/users/new.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_create" (/guard/users.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_edit" (/guard/users/:id/edit.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_update" (/guard/users/:id.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_delete" (/guard/users/:id.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_show" (/guard/users/:id.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_object" (/guard/users/:id/:action.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_collection" (/guard/users/:action/action.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_filter" (/guard/groups/filter.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_batch" (/guard/groups/batch.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group" (/guard/groups.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_new" (/guard/groups/new.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_create" (/guard/groups.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_edit" (/guard/groups/:id/edit.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_update" (/guard/groups/:id.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_delete" (/guard/groups/:id.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_show" (/guard/groups/:id.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_object" (/guard/groups/:id/:action.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_collection" (/guard/groups/:action/action.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_filter" (/guard/permissions/filter.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_batch" (/guard/permissions/batch.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission" (/guard/permissions.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_new" (/guard/permissions/new.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_create" (/guard/permissions.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_edit" (/guard/permissions/:id/edit.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_update" (/guard/permissions/:id.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_delete" (/guard/permissions/:id.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_show" (/guard/permissions/:id.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_object" (/guard/permissions/:id/:action.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_collection" (/guard/permissions/:action/action.:sf_format)
+Jul 13 19:01:59 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_filter" (/guard/users/filter.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_batch" (/guard/users/batch.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user" (/guard/users.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_new" (/guard/users/new.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_create" (/guard/users.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_edit" (/guard/users/:id/edit.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_update" (/guard/users/:id.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_delete" (/guard/users/:id.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_show" (/guard/users/:id.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_object" (/guard/users/:id/:action.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_user_collection" (/guard/users/:action/action.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_filter" (/guard/groups/filter.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_batch" (/guard/groups/batch.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group" (/guard/groups.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_new" (/guard/groups/new.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_create" (/guard/groups.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_edit" (/guard/groups/:id/edit.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_update" (/guard/groups/:id.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_delete" (/guard/groups/:id.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_show" (/guard/groups/:id.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_object" (/guard/groups/:id/:action.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_group_collection" (/guard/groups/:action/action.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_filter" (/guard/permissions/filter.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_batch" (/guard/permissions/batch.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission" (/guard/permissions.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_new" (/guard/permissions/new.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_create" (/guard/permissions.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_edit" (/guard/permissions/:id/edit.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_update" (/guard/permissions/:id.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_delete" (/guard/permissions/:id.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_show" (/guard/permissions/:id.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_object" (/guard/permissions/:id/:action.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_permission_collection" (/guard/permissions/:action/action.:sf_format)
+Jul 13 19:02:00 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /jobeet_category/index with parameters array (  'module' => 'jobeet_category',  'action' => 'index',)
+Jul 13 19:02:01 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Jul 13 19:02:01 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jul 13 19:02:01 symfony [info] {sfBasicSecurityFilter} Action "jobeet_category/index" requires authentication, forwarding to "sfGuardAuth/signin"
+Jul 13 19:02:01 symfony [info] {sfFilterChain} Executing filter "sfFakeRenderingFilter"
+Jul 13 19:02:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 13 19:02:01 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Jul 13 19:02:01 symfony [info] {sfPHPView} Render "/home/sfprojects/jobeet/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
+Jul 13 19:02:01 symfony [info] {sfPartialView} Render "/home/sfprojects/jobeet/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/_signin_form.php"
+Jul 13 19:02:01 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/jobeet/apps/backend/templates/layout.php"
+Jul 13 19:02:01 symfony [info] {sfPHPView} Render "/home/sfprojects/jobeet/apps/backend/templates/layout.php"
+Jul 13 19:02:01 symfony [info] {sfWebResponse} Send content (1856 o)

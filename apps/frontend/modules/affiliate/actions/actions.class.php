@@ -10,14 +10,10 @@
  */
 class affiliateActions extends sfActions
 {
-  // public function executeIndex(sfWebRequest $request)
-  // {
-  //   $this->jobeet_affiliates = Doctrine_Core::getTable('JobeetAffiliate')
-  //     ->createQuery('a')
-  //     ->execute();
-  // }
-
-
+  public function executeNew(sfWebRequest $request)
+  {
+    $this->form = new JobeetAffiliateForm();
+  }
 
   public function executeCreate(sfWebRequest $request)
   {
@@ -30,17 +26,14 @@ class affiliateActions extends sfActions
     $this->setTemplate('new');
   }
 
-  public function executeNew(sfWebRequest $request)
+  public function executeWait()
   {
-    $this->form = new JobeetAffiliateForm();
+
   }
 
-  public function executeWait(sfWebRequest $request)
-  {
-  }
   protected function processForm(sfWebRequest $request, sfForm $form)
   {
-    $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
+    $form->bind($request->getParameter($form->getName()));
     if ($form->isValid())
     {
       $jobeet_affiliate = $form->save();
@@ -48,6 +41,4 @@ class affiliateActions extends sfActions
       $this->redirect($this->generateUrl('affiliate_wait', $jobeet_affiliate));
     }
   }
-
-
 }
